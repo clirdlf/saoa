@@ -1,0 +1,26 @@
+---
+title: Members
+layout: page
+eleventyNavigation:
+  key: Members
+  order: 3
+---
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Institution</th>
+      <th scope="col">Contact</th>
+      {# <th scope="col">Email</th> #}
+    </tr>
+  </thead>
+  <tbody>
+    {% for member in members %}
+    <tr>
+      <td>{{ member.institution }}</td>
+      <td>{{ member.contact }}</td>
+      {# <td><a href="mailto:{{member.email}}"}}">{{ member.email }}</a></td> #}
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

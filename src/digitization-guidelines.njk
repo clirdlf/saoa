@@ -1,0 +1,615 @@
+---
+title: Digitization Guidelines
+layout: page.njk
+---
+
+<div class="field-item even" property="content:encoded">
+  <p>
+    These are SAOA's technical guidelines for digital files derived from
+    text-based materials (in print, microfilm, or microfiche) to be included in
+    SAOA's digital collections. Digitization providers (commercial entities as
+    well as academic institutions) will be expected to conform to these
+    specifications to ensure consistency of the digital materials for ingest
+    into the SAOA digital asset management system. The following are the ideal
+    specifications for ingesting image-based material into SAOA's collections.
+  </p>
+
+  <ol>
+    <li>
+      At the outset of each project, the SAOA Project Manager will schedule a
+      phone consultation with the digitization provider to help ensure that the
+      digitization project conforms to the Digitization Guidelines laid out
+      below. The digitization provider or content contributor should provide
+      SAOA with:
+      <ol type="A">
+        <li>
+          <p>
+            Estimates of the total number of images, total number of volumes
+            (for serials and multi-volume monographs), and if possible, total
+            file size (in MB, GB, or TB),
+          </p>
+        </li>
+        <li>
+          <p>
+            Details regarding the condition of the print or microform material.
+          </p>
+        </li>
+      </ol>
+    </li>
+    <li>
+      Descriptive Metadata – the metadata should:
+      <ol type="A">
+        <li>
+          <p>
+            Use one of the following metadata schemes: Dublin Core or MARC21.
+          </p>
+        </li>
+        <li>
+          <p>
+            Be provided in one of the following metadata/catalog record file
+            formats: MARC XML or CSV.
+          </p>
+        </li>
+        <li>
+          <p>
+            Conform to SAOA's metadata template (for example, for monographs vs
+            serials).
+          </p>
+        </li>
+        <li>
+          <p>
+            Include accurate holdings information for serials or multipart
+            titles.
+          </p>
+        </li>
+        <li>
+          <p>
+            Have been provided in a sample set of records for SAOA staff to
+            review during the proposal phase, as specified above.
+          </p>
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+  <p>
+    NOTE: the data entered into Forum (or copied/pasted into Forum) will be
+    UTF-8. SAOA's hosting platform defaults to UTF-8 encoding for data entry.
+  </p>
+
+  <ol start="3">
+    <li>
+      Structural Metadata – appropriate structural metadata should be provided
+      to help SAOA organize the image files and to allow for navigation within
+      the item (for example, by chapter).
+    </li>
+    <li>
+      Asset File Types – the following file types for each image of a given
+      title should be provided:
+      <ol type="A">
+        <li>
+          <p>Master image files for preservation: TIFF images,</p>
+        </li>
+        <li>Access files (image surrogates): JPEG, JPEG2000 (JP2), or PDF.</li>
+        <li>
+          OCR files (recommended, where available):
+          <ol type="i">
+            <li>.txt and,</li>
+            <li>OCR XML or HOCR</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li>
+      Image Capture
+      <ol type="A">
+        <li>
+          TIFF master image files – these files are for long term preservation
+          purposes and are deposited in a dark archive.
+          <ol type="i">
+            <li>Resolution: 400 ppi to 600 ppi for new digitization.</li>
+            <li>
+              Uncompressed, TIFF 6.0 images, in either “little endian” (IBM PC)
+              or “big endian” (Mac) byte order.
+            </li>
+            <li>
+              All files should be able to pass JHOVE format validation as valid
+              and well-formed.
+            </li>
+            <li>
+              24-bit color for new digitization (8-bit grayscale may be
+              acceptable for items already digitized or with no color content.
+              Either no gray profile, or Gray Gamma 2.2). No proprietary scanner
+              profiles.
+            </li>
+            <li>One page per image.</li>
+          </ol>
+        </li>
+        <li>
+          JPEG, JP2, and PDF access files (image surrogates) – these images are
+          for presentation purposes and are ingested and hosted on SAOA's
+          platform for researchers to access.
+          <ol type="i">
+            <li>
+              Resolution: keep surrogate resolution the same as master TIFF file
+              if the surrogate file size meets the requirements (see subsection
+              iii, below). In some cases, it may be acceptable to decrease the
+              resolution of the surrogate to a minimum of 300 ppi in order to
+              decrease the file size.
+            </li>
+            <li>
+              Compression level: between 10:1 and 15:1, depending upon the
+              dimensions and color of the original.
+            </li>
+            <li>
+              File Size: the size of each access file should range from 0.5 MB
+              (megabytes) to 2.5 MB, depending on various factors (size of the
+              original item, format, content, color, darkness).
+            </li>
+          </ol>
+        </li>
+        <li>
+          Image quality: images should meet the following characteristics, many
+          of which may be available as automated settings on the scanner as part
+          of the image capture option (e.g. microfilm scanning). In exceptional
+          cases, post-processing or correction might be necessary to:
+          <ol type="i">
+            <li>Achieve desired tone distribution</li>
+            <li>Sharpen images to match appearance of the originals</li>
+            <li>
+              Crop and/or deskew the images, oriented to the text (not to the
+              page)
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li>
+      File Naming
+      <ol type="A">
+        <li>
+          Monographs (Single Volume)
+          <ol type="i">
+            <li>Format: titleID_YEAR_sequential image #.tif</li>
+            <li>
+              Example: 986786411_1915_00135.tif
+              <ol type="a">
+                <li>
+                  This would be for a monograph (single volume) published in
+                  1915, 135th consecutive image.
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>
+          Monographs (Multi-Volume)
+          <ol type="i">
+            <li>Format: titleID_YEAR_VOLUME #_sequential image #.tif</li>
+            <li>
+              Example: 990512780_1918_003_00115.tif
+              <ol type="a">
+                <li>
+                  This would be for a monograph (multi-volume) published in
+                  1918, volume 3, 115th consecutive image.
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>
+          Serials
+          <ol type="i">
+            <li>
+              Numbered Issues:
+              <ol type="a">
+                <li>
+                  Format: titleID_YEAR_VOLUME #_ISSUE #_sequential image #.tif
+                </li>
+                <li>
+                  Example: 990312980_1915_002_001_00253.tif
+                  <ul>
+                    <li>
+                      This would be for a serial published in 1915, volume 2,
+                      issue 1, 253rd consecutive image.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+            <li>
+              Dated Issues:
+              <ol type="a">
+                <li>Format: titleID_YEAR-MONTH-DAY_sequential image #.tif</li>
+                <li>
+                  Example: 22123199_1921-12-24_00012.tif
+                  <ul>
+                    <li>
+                      This would be for a serial published on December 24, 1921,
+                      12<sup>th</sup> consecutive image.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+            <li>
+              Quarterly Issues:
+              <ol type="a">
+                <li>Format: titleID_YEAR_QUARTER_sequential image #.tif</li>
+                <li>
+                  Example: 226114808_1895_Spring_00005.tif
+                  <ul>
+                    <li>
+                      This would be for a serial published in 1895, Spring
+                      issue, 5<sup>th</sup> consecutive image.
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>
+          FOR ALL THE ABOVE:
+          <ol type="i">
+            <li>
+              File naming of the master and derivative access files must follow
+              the same pattern.
+              <ol type="a">
+                <li>
+                  The .jp2 or .jpg derivative must have precisely the same
+                  filename as its corresponding master .tif file, except for the
+                  filename extension, i.e. "990512780_1918_003_00115.jp2" is
+                  derived from (corresponds to) the image of
+                  "990512780_1918_003_00115.tif.
+                </li>
+                <li>For the Title ID, assign the OCLC#.</li>
+                <li>
+                  Allow for 5 digits for sequential image numbering and three
+                  digits for the volume and issue numbers.
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li>
+      Folders
+      <ol type="A">
+        <li
+          class="paragraph"
+          style="margin-top: 0in; margin-right: 0in; margin-bottom: 0in"
+        >
+          For&nbsp;each&nbsp;title, there&nbsp;should be&nbsp;two&nbsp;separate
+          folders&nbsp;containing the TIFF and JP2/JPG/PDF
+          files,&nbsp;respectively.&nbsp;&nbsp;
+          <ol type="i">
+            <li>
+              Format:
+              <ol type="a">
+                <li
+                  class="paragraph"
+                  style="margin-top: 0in; margin-right: 0in; margin-bottom: 0in"
+                >
+                  OCLC#_ShortTitle_TIFF&nbsp;
+                </li>
+                <li
+                  class="paragraph"
+                  style="margin-top: 0in; margin-right: 0in; margin-bottom: 0in"
+                >
+                  <span style="font-size: 12pt"
+                    ><span style="tab-stops: list 0.5in"
+                      ><span style="vertical-align: baseline"
+                        ><span style="font-family: 'Times New Roman', serif"
+                          ><span style="font-size: 11pt"
+                            ><span style="font-family: 'Helvetica Neue'"
+                              >OCLC#_ShortTitle_JP2</span
+                            ></span
+                          >&nbsp;</span
+                        ></span
+                      ></span
+                    ></span
+                  >
+                </li>
+              </ol>
+            </li>
+            <li
+              class="paragraph"
+              style="margin-top: 0in; margin-right: 0in; margin-bottom: 0in"
+            >
+              <span style="font-size: 12pt"
+                ><span style="tab-stops: list 0.5in"
+                  ><span style="vertical-align: baseline"
+                    ><span style="font-family: 'Times New Roman', serif"
+                      ><span style="font-size: 11pt"
+                        ><span style="font-family: 'Helvetica Neue'"
+                          >For monographs, all files for the title should be
+                          contained in the main folder (above).</span
+                        ></span
+                      ></span
+                    ></span
+                  ></span
+                ></span
+              >
+            </li>
+            <li
+              class="paragraph"
+              style="margin-top: 0in; margin-right: 0in; margin-bottom: 0in"
+            >
+              <span style="font-size: 12pt"
+                ><span style="tab-stops: list 0.5in"
+                  ><span style="vertical-align: baseline"
+                    ><span style="font-size: 11pt"
+                      ><span style="font-family: 'Helvetica Neue'"
+                        >For serials, please use subfolders and label them by
+                        volume#, issue #, or year (depending&nbsp;</span
+                      ></span
+                    ><span
+                      style="
+                        font-family: 'Times New Roman', serif;
+                        font-size: 11pt;
+                      "
+                      ><span style="font-family: 'Helvetica Neue'"
+                        >on&nbsp;</span
+                      ></span
+                    ><span
+                      style="
+                        font-family: 'Times New Roman', serif;
+                        font-size: 11pt;
+                      "
+                      ><span style="font-family: 'Helvetica Neue'"
+                        >the title).</span
+                      ></span
+                    ><font face="Times New Roman, serif">&nbsp;</font></span
+                  ></span
+                ></span
+              >
+              <ol type="a">
+                <li>
+                  <span style="font-size: 12pt"
+                    ><span style="tab-stops: list 0.5in"
+                      ><span style="vertical-align: baseline"
+                        ><span style="font-family: 'Times New Roman', serif"
+                          ><span style="font-size: 11pt"
+                            ><span style="font-family: 'Helvetica Neue'"
+                              >Example (for issue 5)</span
+                            ></span
+                          >&nbsp;</span
+                        ></span
+                      ></span
+                    ></span
+                  >
+                  <ul>
+                    <li
+                      class="paragraph"
+                      style="
+                        margin-top: 0in;
+                        margin-right: 0in;
+                        margin-bottom: 0in;
+                      "
+                    >
+                      OCLC#_ShortTitle_TIFF&nbsp;
+                      <ul>
+                        <li
+                          class="paragraph"
+                          style="
+                            margin-top: 0in;
+                            margin-right: 0in;
+                            margin-bottom: 0in;
+                          "
+                        >
+                          <span style="font-size: 12pt"
+                            ><span style="tab-stops: list 0.5in"
+                              ><span style="vertical-align: baseline"
+                                ><span
+                                  style="font-family: 'Times New Roman', serif"
+                                  ><span style="font-size: 11pt"
+                                    ><span style="font-family: 'Helvetica Neue'"
+                                      >005</span
+                                    ></span
+                                  ></span
+                                ></span
+                              ></span
+                            ></span
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="paragraph"
+                  style="margin-top: 0in; margin-right: 0in; margin-bottom: 0in"
+                >
+                  <span style="font-size: 12pt"
+                    ><span style="tab-stops: list 0.5in"
+                      ><span style="vertical-align: baseline"
+                        ><span style="font-family: 'Times New Roman', serif"
+                          ><span style="font-size: 11pt"
+                            ><span style="font-family: 'Helvetica Neue'"
+                              >Example (for volume 3, issue 7)</span
+                            ></span
+                          >&nbsp;</span
+                        ></span
+                      ></span
+                    ></span
+                  >
+                  <ul>
+                    <li
+                      class="paragraph"
+                      style="
+                        margin-top: 0in;
+                        margin-right: 0in;
+                        margin-bottom: 0in;
+                      "
+                    >
+                      <span style="font-size: 12pt"
+                        ><span style="tab-stops: list 0.5in"
+                          ><span style="vertical-align: baseline"
+                            ><span style="font-family: 'Times New Roman', serif"
+                              >​​​​​​​​​​​​​​</span
+                            ></span
+                          ></span
+                        ></span
+                      >OCLC#_ShortTitle_TIFF
+                      <ul>
+                        <li
+                          class="paragraph"
+                          style="
+                            margin-top: 0in;
+                            margin-right: 0in;
+                            margin-bottom: 0in;
+                          "
+                        >
+                          003
+                          <ul>
+                            <li
+                              class="paragraph"
+                              style="
+                                margin-top: 0in;
+                                margin-right: 0in;
+                                margin-bottom: 0in;
+                              "
+                            >
+                              007
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="paragraph"
+                  style="margin-top: 0in; margin-right: 0in; margin-bottom: 0in"
+                >
+                  <span style="font-size: 12pt"
+                    ><span style="tab-stops: list 0.5in"
+                      ><span style="vertical-align: baseline"
+                        ><span style="font-family: 'Times New Roman', serif"
+                          ><span style="font-size: 11pt"
+                            ><span style="font-family: 'Helvetica Neue'"
+                              >Example (for the year 1915)</span
+                            ></span
+                          >&nbsp;</span
+                        ></span
+                      ></span
+                    ></span
+                  >
+                  <ul>
+                    <li
+                      class="paragraph"
+                      style="
+                        margin-top: 0in;
+                        margin-right: 0in;
+                        margin-bottom: 0in;
+                      "
+                    >
+                      <span style="font-size: 12pt"
+                        ><span style="tab-stops: list 0.5in"
+                          ><span style="vertical-align: baseline"
+                            ><span style="font-family: 'Times New Roman', serif"
+                              >​​​​​​​​​​​​​​</span
+                            ></span
+                          ></span
+                        ></span
+                      >OCLC#_ShortTitle_TIFF​​​​​​​
+                      <ul>
+                        <li
+                          class="paragraph"
+                          style="
+                            margin-top: 0in;
+                            margin-right: 0in;
+                            margin-bottom: 0in;
+                          "
+                        >
+                          1915​​​​​​​
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li
+          class="paragraph"
+          style="margin-top: 0in; margin-right: 0in; margin-bottom: 0in"
+        >
+          <span style="font-size: 12pt"
+            ><span style="tab-stops: list 0.5in"
+              ><span style="vertical-align: baseline"
+                ><span style="font-family: 'Times New Roman', serif"
+                  ><span style="font-size: 11pt"
+                    ><span style="font-family: 'Helvetica Neue'"
+                      >For every folder, there should be identical names for the
+                      master TIFF files and the corresponding access files (such
+                      as JPG, JP2, or PDF), except for the</span
+                    ></span
+                  >&nbsp;<span
+                    data-contrast="none"
+                    style="-webkit-user-select: text"
+                    xml:lang="EN-US"
+                    ><span style="-webkit-user-drag: none"
+                      ><span style="font-variant-ligatures: none !important"
+                        ><span style="-webkit-nbsp-mode: normal !important"
+                          ><span style="-webkit-user-select: text"
+                            ><span style="-webkit-user-drag: none"
+                              ><span
+                                style="-webkit-nbsp-mode: normal !important"
+                                ><span style="font-size: 11pt"
+                                  ><span style="font-family: 'Helvetica Neue'"
+                                    >file</span
+                                  ></span
+                                ></span
+                              ></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  ><span
+                    data-contrast="none"
+                    style="-webkit-user-select: text"
+                    xml:lang="EN-US"
+                    ><span style="-webkit-user-drag: none"
+                      ><span style="font-variant-ligatures: none !important"
+                        ><span style="-webkit-nbsp-mode: normal !important"
+                          ><span style="-webkit-user-select: text"
+                            ><span style="-webkit-user-drag: none"
+                              ><span
+                                style="-webkit-nbsp-mode: normal !important"
+                                >&nbsp;<span style="font-size: 11pt"
+                                  ><span style="font-family: 'Helvetica Neue'"
+                                    >extensions.</span
+                                  ></span
+                                ></span
+                              ></span
+                            ></span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  >&nbsp;</span
+                ></span
+              ></span
+            ></span
+          >
+        </li>
+      </ol>
+    </li>
+    <li>
+      File Transfer
+      <ol type="A">
+        <li>
+          Acceptable methods of file transfer are via hard drive, USB drive,
+          FTP, Dropbox, Google Drive, and CD.
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+  <p>Last updated: September 14, 2021</p>
+</div>

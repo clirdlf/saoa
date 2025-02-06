@@ -1,4 +1,8 @@
-# 11ty with Bootstrap Scaffold
+# SAOA Notes
+
+Logo appears to be Modern Symphony, Baskerville Regular is a close replacement.
+
+## 11ty with Bootstrap Scaffold
 
 This is scaffold for new projects using [11ty](https://www.11ty.dev/) with [Bootstrap](https://getbootstrap.com/docs/5.3/examples/) (building with [Vite](https://vitejs.dev/)) meant to deploy to [GitHub Pages](https://pages.github.com/). Also includes some basic [VSCode](https://code.visualstudio.com/) setup.
 
