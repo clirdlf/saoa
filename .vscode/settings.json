@@ -5,5 +5,8 @@
   },
   "files.associations": {
     "*.njk": "html"
-  }
+  },
+  "cSpell.words": [
+    "SAOA"
+  ]
 }
