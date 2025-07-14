@@ -165,7 +165,8 @@ export const config = {
     includes: '_includes', // default: "_includes" (`input` relative)
     data: '_data', // default: "_data" (`input` relative)
     output: '_site'
-  }
+  },
+
 
   // -----------------------------------------------------------------
   // Optional items:
@@ -178,5 +179,5 @@ export const config = {
   // it will transform any absolute URLs in your HTML to include this
   // folder name and does **not** affect where things go in the output folder.
 
-  // pathPrefix: "/",
+  pathPrefix: "/saoa",
 }
